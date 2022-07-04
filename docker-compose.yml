@@ -1,0 +1,17 @@
+version: "3"
+services:
+  gpu-mem:
+    image: pytorch/pytorch:1.9.1-cuda11.1-cudnn8-devel
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    volumes:
+      - ${PWD}:/workspace
+    shm_size: 384g
+    # command: bash -xc "sleep infinity"
+    command: bash
+    working_dir: /workspace
+    tty: true
+    stdin_open: true
