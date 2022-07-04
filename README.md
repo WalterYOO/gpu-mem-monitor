@@ -5,5 +5,5 @@ This is a script to monitoring gpu memory, and write memory info into stdout & l
 ## Usage
 
 ```shell
-python3 gpu-mem-monitor --gpu 0 --test_name gpu_test
+python3 gpu-mem-monitor.py --gpu 0 --test_name gpu_test
 ```
